@@ -1,0 +1,71 @@
+@import "fonts";
+@import "mq";
+@import "palette";
+@import "embed";
+// @import "enhancer";
+
+.interactive-atom {
+    margin: 0;
+    padding: 0;
+}
+
+.audio-player {
+
+    padding: 1rem;
+    background-color: #f1f1f1;
+    
+    h1 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        flex-direction: row;
+        text-align: left;
+        margin: 0 0 .5rem;
+        padding: 0;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+    .AudioIcon {
+        width: 3rem;
+        border-radius: 100px;
+        margin-right: 2px;
+
+        @media screen and (min-width: map-get($mq-breakpoints, tablet) ) {
+            width: 2rem;
+        }
+    }
+    button {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        outline: none;
+
+        svg {
+            width: 4rem;
+            height: 4rem;
+        }
+        .progress {
+            transform-origin: 50%;
+            transform: rotate(-90deg);
+        }
+        &:hover, &.playing {
+
+            .controls svg {
+                fill: #69d1ca;
+
+            }
+        }
+    }
+
+    .st1 {
+        fill: white;
+    }
+
+}
